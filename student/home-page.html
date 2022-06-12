@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Management System</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     
     <div id="topnav">
         <div id="logo-search">
-            <a href="#topnav"><img src="./images/Attendance Management System-logos_transparent.png" alt="web-logo" height="50" id="web-logo"></a>  
+            <a href="#topnav"><img src="../images/Attendance Management System-logos_transparent.png" alt="web-logo" height="50" id="web-logo"></a>  
             <div id="search-submit">
                 <input type="Search" placeholder="Search">
                 <button id="submit">Submit</button>
@@ -45,15 +45,15 @@
         <div class="flex-container">
             <div class="flexbox-item" style="margin-right:3px; background-color:#B1D4E0">
                 <span></span>
-                <a href="#attendance"><img src="./images/Attendance-logos_transparent.png" alt="" width="170" class="activity-img"></a>
+                <a href="#attendance"><img src="../images/Attendance-logos_transparent.png" alt="" width="170" class="activity-img"></a>
             </div>
             <div class="flexbox-item" style="margin-left: 0px; margin-right:3px; background-color:white">
                 <span></span>
-                <a href="#timetable"><img src="./images/Timetable.png" alt="" width="170" class="activity-img"></a>
+                <a href="#timetable"><img src="../images/Timetable.png" alt="" width="170" class="activity-img"></a>
             </div>
             <div class="flexbox-item" style="margin-left: 0px; background-color:#B1D4E0;margin-right:3px">
                 <span></span>
-                <a href="#permission"><img src="./images/Permission.png" alt="" width="200" class="activity-img" style="margin-left: 8%;">
+                <a href="#permission"><img src="../images/Permission.png" alt="" width="200" class="activity-img" style="margin-left: 8%;">
                 </a>
             </div>
         </div>
@@ -101,28 +101,29 @@
         <div id="disp-att">
             <!-- Remove the h2 tag, then add -->
             
-                <form action="" id="letter-form">
+                
                     <div class="letter-container">
-                        <label for="fname" style="font-weight: 900;">NAME:</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name.." class="letter">
+                        <label for="fName" style="font-weight: 900;">NAME:</label>
+                        <input type="text" id="fName" name="firstname" placeholder="Your name.." class="letter">
                         
-                        <label for="lname" style="font-weight: 900;">SUBJECT:</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your subject.." class="letter">
+                        <label for="lame" style="font-weight: 900;">SUBJECT:</label>
+                        <input type="text" id="lName" name="lastname" placeholder="Your subject.." class="letter">
                     
                         <label for="lname" style="font-weight: 900;">TIME:</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Time you are attending.." class="letter">
+                        <input type="text" id="time" name="lastname" placeholder="Time you are attending.." class="letter">
                         
                         <label for="branch" style="font-weight: 900;">BRANCH:</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your branch..." class="letter">
+                        <input type="text" id="branch" name="lastname" placeholder="Your branch..." class="letter">
                     
                         <label for="REASON" style="font-weight: 900;">REASON:</label>
-                        <textarea id="REASON" name="REASON" placeholder="Write about which event you are attending and why..." style="height:200px" class="letter"></textarea>
+                        <textarea id="reason" name="REASON" placeholder="Write about which event you are attending and why..." style="height:200px" class="letter"></textarea>
                         
-                        <input type="submit" value="Submit" id="letter-submit" style="font-weight: 900;">
+                        <button value="Submit" id="submit-letter" style="font-weight: 900;" >SUBMIT</button>
                     </div>
-                </form>
+
             </div>
     </div>
     <script type = "module" src="./home-page.js"></script>
+    <script type="module" src="./submit-letter.js"></script>
 </body>
 </html>

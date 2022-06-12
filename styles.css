@@ -366,10 +366,11 @@ input{
   box-sizing: border-box; 
   margin-top: 6px; 
   margin-bottom: 16px;
-  resize: vertical
+  resize: vertical;
+  font-weight: 900;
 }
 
-#letter-submit{
+#submit-letter{
   background-color: #04AA6D;
   color: cyan;
   padding: 12px 20px;
@@ -385,9 +386,6 @@ input{
   flex-direction: column;
   margin-top: 50px;
   padding-bottom: 50px;
-}
-
-#letter-form{
   width: 60%;
   margin-left: 200px;
 }

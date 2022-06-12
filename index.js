@@ -18,7 +18,14 @@ document.getElementById("login")?.addEventListener('click', ()=>{
 
     window.onload = signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        location.replace('./home-page.html');
+
+        getDoc(doc(db, "Users", `${roll}`)).then(docSnap => {
+            if (docSnap.data().Role == "Student") {
+                location.replace('./student/home-page.html');    
+            } else {
+                location.replace('./faculty/homepage-faculty.html');   
+            }
+        })  
     })
     .catch((error) => {
         const errorCode = error.code;
@@ -34,18 +41,3 @@ document.getElementById("login")?.addEventListener('click', ()=>{
         }
     });
 })
-
-// export const details = () =>{
-//     return({
-//         roll : roll,
-//         email : email,
-//         password : password
-//     })
-// }
-
-
-
-
-
-
-

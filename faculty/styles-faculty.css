@@ -1,0 +1,227 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+*{
+  font-family: 'Ubuntu', sans-serif; 
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* Navbar styling starts here */
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+button{
+  color: white;
+  background-color: #3c2a08;
+  border-color: #524726;
+}
+
+button:hover{
+  background-color: #718597;
+}
+
+a:hover{
+  color:#a8bccd;
+  font-weight: bolder;
+}
+
+#topnav{
+  display: flex;
+  flex-direction: row;
+  background-color: #42d1b4;
+  overflow: hidden;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+#logo-search{
+  margin-top: 2%;
+  margin-left: 6%;
+  margin-bottom: 2%;
+}
+
+#search-submit{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+#web-logo{
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+#submit{
+  margin-left: 1%;
+  border-radius: 5px;
+}
+
+
+input[Search]{
+    border-radius: 5px;
+}
+
+#menu-details{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+/* When added, divs change. Try fixing */
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+} */
+
+
+/* User details styling */
+
+#user-details{
+  margin-top: 0%;
+  background-color: #42d1b4;
+}
+
+#user-info{
+  padding-top: 50px;
+  margin-left: 7%;
+  padding-bottom: 10px;
+}
+
+/* Info Div starts here */
+
+#outer-div{
+  padding-top: 2px;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: column;
+  background-color: #ffffff;
+  height: 300px;
+  align-items: space-between;
+  align-items: flex-end;
+  
+}
+
+.flex-container>div {
+  justify-self: space;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  font-size: x-small;
+}
+
+.activity-img{
+  margin-top: 10%;
+}
+
+.flexbox-item {
+    height: 100px;
+    width: 200px;
+    order: 1;
+    position: relative;
+    z-index: 1;
+	  transition: 0.5s;
+    border-left-style: solid;
+    border-color: #42d1b4;
+    border-width: 5px;
+}
+
+.flexbox-item span{
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background:#76ebc9;
+	z-index: -1;
+	transition: 0.2s;
+  order: 1;
+}
+.flexbox-item:hover span{
+	width: 100%;
+}
+.flexbox-item:hover{
+	color: black;
+}
+
+/* Attendance Starts here */
+
+/* Change the colors if needed, these were the ones I used */
+
+/* Midnight Blue
+#145DA0
+
+Dark Blue
+#0C2D48
+
+Blue
+#2E8BC0
+
+Baby Blue
+#B1D4E0 */
+
+#attendance>h1{ 
+  font-size:3em; 
+  margin-bottom:0;
+}
+
+#attendance{
+  margin-top: 50px;
+  padding-top: 15px;
+  background-color: #42d1b4;
+  width: 100%;
+  height: 100%;
+}
+
+#disp-att{
+  display: flex;
+  flex-direction: row;
+  margin-left: 7%;
+}
+
+#update{
+  margin-top: 50px;
+  padding-top: 15px;
+  background-color: #42d1b4;
+  width: 100%;
+  height: 100%;
+}
+
+#update>h1{ 
+  font-size:3em; 
+  margin-bottom:0;
+}
+#requests{
+  margin-top: 50px;
+  padding-top: 15px;
+  background-color: #42d1b4;
+  width: 100%;
+  height: 100%;
+}
+
+#requests>h1{ 
+  font-size:3em; 
+  margin-bottom:0;
+}

@@ -1,5 +1,6 @@
-import {firebaseConfig, initializeApp, getAuth, createUserWithEmailAndPassword, getFirestore, doc, getDoc, getDocs, collection, addDoc, setDoc, signInWithEmailAndPassword} from "./config.js";
+import {firebaseConfig, initializeApp, getAuth, createUserWithEmailAndPassword, getFirestore, doc, getDoc, getDocs, collection, addDoc, setDoc, signInWithEmailAndPassword} from "../config.js";
 
+setInterval('autoRefresh()', 1000);
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
@@ -11,19 +12,12 @@ var password = localStorage.getItem("password")
 
 var sName, department, role, ID, sClass;
 
-window.onbeforeunload = function() { 
-    var leave = confirm("Do you want to Logout?");
-    if(leave){
-        localStorage.clear();
-        location.replace('./index.html');
-    }
-};
 
 document.getElementById("logout").addEventListener("click", () =>{
     var leave = confirm("Do you want to Logout?");
     if(leave){
         localStorage.clear();
-        location.replace('./index.html');
+        location.replace('../index.html');
     }
 })
 
@@ -56,8 +50,7 @@ var stdAttendance = Math.ceil(localStorage.getItem("percent"));
 
 const numb = document.getElementById('disp-number');
 let counter = 0;
-window.setTimeout(setInterval(() => {
-        //change here
+window.onload = setInterval(() => {
    
     if(stdAttendance >= 75){
         document.getElementsByClassName("progress")[0].style.backgroundColor = "green"
@@ -83,4 +76,4 @@ window.setTimeout(setInterval(() => {
         counter+=1;
         numb.innerHTML = counter + "%";
     }
-}, 60), 4000);
+}, 60)
