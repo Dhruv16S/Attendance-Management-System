@@ -100,14 +100,29 @@
         <h1 style="margin-left:7%">Permission</h1>
         <div id="disp-att">
             <!-- Remove the h2 tag, then add -->
-            <h2>Form must have, name, roll number, hour, date and reason fields</h2>
-            <h2 style="margin-left: 40%;">Lalasa/Ganesh Insert a form here.</h2>
-        </div>
-        <!-- Remove this p tag at last -->
-        <p style="margin-left: 40%;">Aenean id efficitur erat. Integer in porttitor felis, et sodales arcu. Morbi pretium dolor a dui lacinia, posuere commodo erat convallis. Donec auctor sollicitudin eros eu vehicula. Pellentesque viverra nulla sit amet justo ultricies tempus. Proin lobortis faucibus risus, eu pulvinar quam ullamcorper vel. Suspendisse sit amet erat vehicula, sodales quam eget, facilisis purus.
-            Nulla vulputate turpis risus, ac blandit augue accumsan vitae. Morbi et sem venenatis quam dapibus finibus. Fusce venenatis quam est, eget vestibulum massa tempus ornare. Aenean imperdiet arcu in mollis ultricies. Donec libero purus, accumsan a dolor quis, lacinia pellentesque arcu. Quisque feugiat enim non luctus mattis. Quisque vitae orci ultrices, ultricies lorem quis, dapibus lacus. Aenean porttitor, sem at vulputate luctus, nibh tellus vulputate magna, ut finibus mi ante sed turpis. Ut vitae laoreet tortor. Nunc maximus pellentesque tempus. Integer augue libero, hendrerit quis hendrerit at, suscipit vel augue. Phasellus ac malesuada purus, sit amet finibus ligula. Phasellus mauris metus, aliquet ut elit at, fringilla lobortis ex. Sed euismod dignissim eleifend. Nullam vitae suscipit nibh, ut luctus ante.</p>
+            
+                <form action="" id="letter-form">
+                    <div class="letter-container">
+                        <label for="fname" style="font-weight: 900;">NAME:</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name.." class="letter">
+                        
+                        <label for="lname" style="font-weight: 900;">SUBJECT:</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your subject.." class="letter">
+                    
+                        <label for="lname" style="font-weight: 900;">TIME:</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Time you are attending.." class="letter">
+                        
+                        <label for="branch" style="font-weight: 900;">BRANCH:</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your branch..." class="letter">
+                    
+                        <label for="REASON" style="font-weight: 900;">REASON:</label>
+                        <textarea id="REASON" name="REASON" placeholder="Write about which event you are attending and why..." style="height:200px" class="letter"></textarea>
+                        
+                        <input type="submit" value="Submit" id="letter-submit" style="font-weight: 900;">
+                    </div>
+                </form>
+            </div>
     </div>
-
     <script type = "module" src="./home-page.js"></script>
 </body>
 </html>

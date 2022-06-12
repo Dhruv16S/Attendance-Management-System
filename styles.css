@@ -358,3 +358,36 @@ input{
   }
 }
 
+.letter{
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid cyan; 
+  border-radius: 4px;
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  resize: vertical
+}
+
+#letter-submit{
+  background-color: #04AA6D;
+  color: cyan;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+#letter-submit:hover{
+  background-color: #45a049;
+}
+
+.letter-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+#letter-form{
+  width: 60%;
+  margin-left: 200px;
+}
