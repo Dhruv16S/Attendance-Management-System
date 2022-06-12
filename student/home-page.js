@@ -1,6 +1,5 @@
 import {firebaseConfig, initializeApp, getAuth, createUserWithEmailAndPassword, getFirestore, doc, getDoc, getDocs, collection, addDoc, setDoc, signInWithEmailAndPassword} from "../config.js";
 
-setInterval('autoRefresh()', 1000);
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)

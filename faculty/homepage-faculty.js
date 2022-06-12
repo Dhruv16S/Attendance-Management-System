@@ -38,5 +38,4 @@ document.getElementsByClassName('bClick')[0].addEventListener("click", ()=>{
         newButton.innerText = `${ids[i]}`;
         document.getElementById("select-roll").appendChild(newButton);
     }
-
 })
