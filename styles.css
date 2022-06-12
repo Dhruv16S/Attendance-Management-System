@@ -64,6 +64,10 @@ a:hover{
   border-radius: 5px;
 }
 
+#logout{
+  margin-left: 1%;
+  border-radius: 5px;
+}
 
 input[Search]{
     border-radius: 5px;
@@ -226,3 +230,54 @@ Baby Blue
   font-size:3em; 
   margin-bottom:0;
 }
+
+/* Login Page begins here */
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.login{
+  height: 50px;
+  border-radius: 3px;
+  width: 200px;
+  border-style: solid;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  font-family: 'Ubuntu', sans-serif; 
+}
+
+#login{
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  border-style: solid;
+  background-color: #145DA0;
+  color: white;
+  font-weight: 700 ;
+}
+
+.login:focus{
+  outline-style: solid;
+  outline-color: #2E8BC0;
+  outline-width: 2px;
+}
+
+#login:hover{
+  background-color: #2E8BC0;
+}
+
+
