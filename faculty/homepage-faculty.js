@@ -4,21 +4,23 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 const auth = getAuth()
 
-// const querySnapshot = await getDocs(collection(db, "Users"));
-// var i = 0
-// querySnapshot.forEach((doc) => {
-//     if(doc.data().Role == "Student"){
-//         var div = document.getElementsByClassName('select-roll')
-//         document.getElementsByClassName("bClick")[0].addEventListener("click", function(){
-//             alert("clicked")
-//             let newButton = document.createElement("button");
-//             newButton.setAttribute("class", "list");
-//             newButton.innerText = `${doc.data().ID}`;
-//             div[i](newButton);
-//         })
-//         i++
-//     }
-// });
+window.onload = getDoc(doc(db, "Users", `${localStorage.getItem("roll")}`)).then(docSnap => {
+    if (docSnap.exists()) {
+        document.getElementById("student-name").innerHTML = docSnap.data().Name;
+        document.getElementById("roll").innerHTML = docSnap.data().ID;
+        document.getElementById("role").innerHTML = docSnap.data().Role;
+    } else {
+    console.log("No such document!");
+    }
+})
+
+document.getElementById("logout").addEventListener("click", () =>{
+    var leave = confirm("Do you want to Logout?");
+    if(leave){
+        localStorage.clear();
+        location.replace('../index.html');
+    }
+})
 
 var ids = []
 
@@ -29,9 +31,9 @@ const querySnapshot =  await getDocs(collection(db, "Users"));
         }
     })
 
-console.log(ids)
 
 document.getElementsByClassName('bClick')[0].addEventListener("click", ()=>{
+    document.getElementById("selectedClass").innerHTML= "C1 - II Year" ;
     for(let i = 0; i < ids.length; i++){
         let newButton = document.createElement("button");
         newButton.setAttribute("class", "list");
