@@ -36,9 +36,44 @@ window.onload = signInWithEmailAndPassword(auth, email, password)
             console.log("No such document!");
             }
         })
+
+    
+    
     })
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage) 
     });
+
+const numb = document.getElementById('disp-number');
+let counter = 0;
+window.onload = setInterval(() => {
+        //change here
+    var stdAttendance = 10
+
+    if(stdAttendance >= 75){
+        document.getElementsByClassName("progress")[0].style.backgroundColor = "green"
+        document.getElementsByClassName('progress')[1].style.backgroundColor = "green"
+    }
+
+    else if(stdAttendance < 75 && stdAttendance >= 50){
+        document.getElementsByClassName("progress")[0].style.backgroundColor = "#fc6f03"
+        document.getElementsByClassName('progress')[1].style.backgroundColor = "#fc6f03"
+    }
+
+    else if(stdAttendance < 50){
+        document.getElementsByClassName("progress")[0].style.backgroundColor = "red"
+        document.getElementsByClassName('progress')[1].style.backgroundColor = "red"
+    }
+
+    if(counter == stdAttendance){
+        clearInterval();
+        document.getElementsByClassName('progress')[0].style.animationPlayState = 'paused';
+        document.getElementsByClassName('progress')[1].style.animationPlayState = 'paused';
+        return
+    }else{
+        counter+=1;
+        numb.innerHTML = counter + "%";
+    }
+}, 80);
